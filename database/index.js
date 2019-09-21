@@ -13,7 +13,7 @@ db.connect = async () => {
 		process.env.DBUSER || 'root',
 		process.env.DBPASS || '123456',
 		{
-			port: process.env.DBPORT || '32773',
+			port: process.env.DBPORT || '3306',
 			host: process.env.DBHOST || 'localhost',
 			dialect: process.env.DBDIALECT || 'mysql',
 			timezone: process.env.DBTIMEZONE || 'America/Sao_Paulo',
