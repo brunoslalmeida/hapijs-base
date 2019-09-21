@@ -6,5 +6,5 @@ exports.Methods = {
 };
 exports.RoutesPath = 'routes';
 exports.Strategy = 'auth';
-exports.State = 'assespro';
+exports.State = 'CHANGEME';
 exports.ModelsPath = 'models'
