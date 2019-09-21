@@ -9,7 +9,7 @@ db = {}
 db.define = (t, b, o) => sequelize.define(t, b, o);
 db.connect = async () => {
 	sequelize = new Sequelize(
-		process.env.DBNAME || 'voting',
+		process.env.DBNAME || 'CHANGEME',
 		process.env.DBUSER || 'root',
 		process.env.DBPASS || '123456',
 		{
