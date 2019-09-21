@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const FS = require('fs');
 const Hapi = require('@hapi/hapi');
 
