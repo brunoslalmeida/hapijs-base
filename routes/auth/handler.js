@@ -14,13 +14,13 @@ handler.login = async (request, h) => {
 	pass = Crypt.createHash(request.payload.pass);
 	mail = request.payload.mail ;
 
- try {
+    try {
 		let model = UserModel.getModel();
 		let user = await Crud.get({where: {mail: mail}}, model);
 
 		user = user.dataValues;
 
-		assert.strictEqual(user.pass, request.payload.pass);
+		assert.strictEqual(user.pass, pass);
 
 		const sid = UUID();
 
