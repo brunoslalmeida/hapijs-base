@@ -3,7 +3,8 @@ require('dotenv').config();
 const FS = require('fs');
 const Hapi = require('@hapi/hapi');
 
-const DB = require(__dirname + '/database')
+const DB = require(__dirname + '/database');
+
 const { RoutesPath, Strategy, State } = require(__dirname + '/config');
 
 init = async () => {
@@ -59,7 +60,8 @@ init = async () => {
 		route.route(server);
 	});
 
-	await DB.connect();
+	//True for db reacreation
+	await DB.connect(false);
 	await server.start();
 	console.log('Server running on %s', server.info.uri);
 }
