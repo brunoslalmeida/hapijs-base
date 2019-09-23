@@ -28,7 +28,7 @@ init = async () => {
 
 	const cache = server.cache({ segment: Strategy, expiresIn: 60 * 60 * 1000 });
 	server.app.cache = cache;
-	
+
 	let plugins = [
 		{
 			plugin: require('@hapi/cookie')
@@ -36,11 +36,13 @@ init = async () => {
 		{
 			plugin: require('hapi-authorization'),
 			options: {
-				roles: Roles
+				roles: Roles,
+				hierarchy: true,
+				roleHierarchy: Roles
 			}
 		}
 	];
-	
+
 	await server.register(plugins);
 
 	server.auth.strategy(Strategy, 'cookie', {
@@ -79,7 +81,6 @@ init = async () => {
 }
 
 process.on('unhandledRejection', (err) => {
-
 	console.log(err);
 	process.exit(1);
 });

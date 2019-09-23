@@ -7,7 +7,7 @@ user.route = server => {
 	server.route([
 		{
 			method: Methods.GET,
-			path: '/',
+			path: '/test',
 			config: {
 				handler: Handler.helloWorld
 			}

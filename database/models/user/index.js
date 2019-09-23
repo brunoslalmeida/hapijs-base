@@ -39,7 +39,8 @@ const definition = {
 	mail: {
 		type: Sequelize.STRING,
 		field: 'user_email',
-		allowNull: false
+		allowNull: false,
+		unique: true
 	},
 	pass: {
 		type: Sequelize.STRING,
