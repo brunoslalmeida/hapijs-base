@@ -14,7 +14,15 @@ entry.getModel = function () {
 
 entry.createRelations = () => { }
 
-module.exports = entry;
+entry.fields = {
+	...DB.defaultValue,
+	
+	id: 'id',
+	name: 'name',
+	role: 'role',
+	mail: 'mail',
+	pass: 'pass',
+}
 
 const definition = {
 	id: {
@@ -49,3 +57,5 @@ const options = {
 	freezeTableName: true,
 	paranoid: true,
 };
+
+module.exports = entry;

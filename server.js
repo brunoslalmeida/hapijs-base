@@ -5,7 +5,7 @@ const Hapi = require('@hapi/hapi');
 
 const DB = require(__dirname + '/database');
 
-const { RoutesPath, Strategy, State } = require(__dirname + '/config');
+const { RoutesPath, Strategy, State, Roles } = require(__dirname + '/config');
 
 init = async () => {
 
@@ -28,8 +28,20 @@ init = async () => {
 
 	const cache = server.cache({ segment: Strategy, expiresIn: 60 * 60 * 1000 });
 	server.app.cache = cache;
-
-	await server.register(require('@hapi/cookie'));
+	
+	let plugins = [
+		{
+			plugin: require('@hapi/cookie')
+		},
+		{
+			plugin: require('hapi-authorization'),
+			options: {
+				roles: Roles
+			}
+		}
+	];
+	
+	await server.register(plugins);
 
 	server.auth.strategy(Strategy, 'cookie', {
 		cookie: {

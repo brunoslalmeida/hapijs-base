@@ -2,7 +2,7 @@ const FS = require('fs');
 const Sequelize = require('sequelize');
 
 const Crypt = require(__dirname + '/../tools/crypt');
-const { ModelsPath, Roles } = require(__dirname + '/../config');
+const { ModelsPath, Role } = require(__dirname + '/../config');
 
 var sequelize;
 db = {}
@@ -23,6 +23,12 @@ db.connect = force => {
 		}
 	);
 
+	db.defaultFields = {
+		createdAt: 'createdAt',
+		updatedAt: 'updatedAt',
+		deletedAt: 'deletedAt',
+	}
+
 	let models = FS.readdirSync(__dirname + '/' + ModelsPath);
 
 	models.forEach(path => {
@@ -42,13 +48,13 @@ db.connect = force => {
 				name: 'Usuário',
 				pass: Crypt.createHash('12345678'),
 				mail: 'user@marcasnaweb.com.br',
-				role: Roles.user
+				role: Role.user
 			},
 			{
 				name: 'Administrador',
 				pass: Crypt.createHash('12345678'),
 				mail: 'admin@marcasnaweb.com.br',
-				role: Roles.admin
+				role: Role.admin
 			}
 		]);
 	});

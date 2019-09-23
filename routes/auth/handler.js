@@ -34,7 +34,6 @@ handler.login = async (request, h) => {
 
 		return {};
 	} catch (err) {
-		console.log(err);
 	 	return Boom.unauthorized();
 	}
 }

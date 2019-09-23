@@ -9,7 +9,7 @@ auth.route = server => {
 	server.route([
 		{
 			method: Methods.POST,
-			path: '/login',
+			path: '/login/',
 			config: {
 				handler: Handler.login,				
 				validate: {
@@ -19,7 +19,7 @@ auth.route = server => {
 		},
 		{
 			method: Methods.GET,
-			path: '/logout',
+			path: '/logout/',
 			config: {
 				auth: {
 					strategy: Strategy

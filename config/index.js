@@ -1,19 +1,19 @@
-roles = {
+role = {
 	admin: "admin",
 	user: "user",
 	guest: "guest",
 }
 
-roles.default = roles.user;
-roles.unauth = roles.guest;
+role.default = role.user;
+role.unauth = role.guest;
 
-exports.Roles = roles;
+exports.Role = role;
 
 //The order matters
-exports.Role = [
-	roles.admin,
-	roles.user,
-	roles.guest
+exports.Roles = [
+	role.admin,
+	role.user,
+	role.guest
 ]
 	
 exports.Methods = {
@@ -24,5 +24,5 @@ exports.Methods = {
 };
 exports.RoutesPath = 'routes';
 exports.Strategy = 'auth';
-exports.State = 'CHANGEME';
+exports.State = process.env.COOKIE || 'CHANGEME';
 exports.ModelsPath = 'models'
