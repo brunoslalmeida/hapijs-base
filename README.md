@@ -53,7 +53,7 @@ DBDIALECT=Dialeto_do_banco ('mysql' | 'mariadb' | 'postgres' | 'mssql')
 
 | Variável | Obrigatório | Valor default |
 | ------ | ------ | ------ |
-| DBNAME | Sim | Nome do Projeto|
+| DBNAME | Sim | null |
 | DBUSER | Não | root |
 | DBPASS | Não | 123456 |
 | DBPORT | Não | 3306 |
