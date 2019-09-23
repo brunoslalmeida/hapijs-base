@@ -2,9 +2,11 @@
 
 Esta é a base que os projetos da MNW usaram como backend. Ele contem as seguitens funcionalidades
   - Autenticação
+  - Autorização
   - Rotas protegidas e não protegidas
   - Comunicação com banco de dados
-  - Exemplo de modelo
+  - Modelo de usuário
+  - CRUD de usuário
 
 # Hospedagem
 
