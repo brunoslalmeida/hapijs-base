@@ -15,8 +15,7 @@ db.connect = async () => {
 		{
 			port: process.env.DBPORT || '3306',
 			host: process.env.DBHOST || 'localhost',
-			dialect: process.env.DBDIALECT || 'mysql',
-			timezone: process.env.DBTIMEZONE || 'America/Sao_Paulo',
+			dialect: process.env.DBDIALECT || 'mysql'
 		}
 	);
 

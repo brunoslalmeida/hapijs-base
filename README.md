@@ -49,7 +49,6 @@ DBPASS=Senha_do_usuario_do_banco
 DBPORT=Porta_do_banco
 DBHOST=Host_do_banco
 DBDIALECT=Dialeto_do_banco ('mysql' | 'mariadb' | 'postgres' | 'mssql') 
-DBTIMEZONE=Time_zone 
 ```
 
 | Variável | Obrigatório | Valor default |
@@ -60,7 +59,6 @@ DBTIMEZONE=Time_zone
 | DBPORT | Não | 3306 |
 | DBHOST | Não | 127.0.0.1 |
 | DBDIALECT | Não | mysql |
-| DBTIMEZONE | Não | America/Sao_Paulo |
 
 ## Iniciando o servidor
 ```sh
