@@ -39,7 +39,7 @@ HOST=host_do_servidor
 
 | Variável | Obrigatório | Valor default |
 | ------ | ------ | ------ |
-| PORT | sim | 8081 |
+| PORT | sim | 8001 |
 | HOST | sim | 0.0.0.0 |
 para o arquivo (**database/index.js**):
 ```sh
