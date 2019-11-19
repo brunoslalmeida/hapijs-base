@@ -22,7 +22,7 @@ Este modelo de softwrae ficará hospedado com a seguinte arquitetura
 
 ```sh
 $ git clone https://github.com/brunoslalmeida/hapijs-base.git
-$ cd base-nodejs-backend
+$ cd hapijs-base
 $ yarn
 ```
 
@@ -81,4 +81,4 @@ $ nodemon server
 ## Todo
 
 - Adicionar testes
-- Aguardar aproação do [PR: #31]([https://github.com/toymachiner62/hapi-authorization/pull/31 "PR: #31")
+- Aguardar aproação do [PR: #31]([https://github.com/toymachiner62/hapi-authorization/pull/31 "PR: #31") https://github.com/toymachiner62/hapi-authorization/pull/31
