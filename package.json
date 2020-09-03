@@ -14,7 +14,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"@hapi/cookie": "^10.1.2",
-		"@hapi/hapi": "^18.4.0",
+		"@hapi/hapi": "^19.1.1",
 		"dotenv": "^8.1.0",
 		"hapi-authorization": "^4.0.0",
 		"mysql2": "^1.7.0",
